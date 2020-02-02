@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <title>SANSBOX AFRAME</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: sphere; radius: 1.5"
+            material="color: white; shader: flat; src: textures/fabric.jpg" position="5 10 -20"
+            animation="property: position; to: 5 2 -20; dur: 3000; easing: easeInOutQuad; dir: alternate; loop: true;"
+            light="type:point; color: turquoise; intensity: 1"></a-entity>
+        <a-entity geometry="primitive: sphere; radius: 1.5"
+            material="color: white; shader: flat; src: textures/fabric.jpg" position="-5 10 -20"
+            animation="property: position; to: -5 2 -20; dur: 2000; easing: easeInOutQuad; dir: alternate; loop: true; delay: 1000"
+            light="type:point; color: purple; intensity: 1"></a-entity>
+        <a-entity geometry="primitive: sphere; radius: 1.5"
+            material="color: white; shader: flat; src: textures/marble.jpg" position="15 10 -20"
+            animation="property: position; to: 15 2 -20; dur: 2000; easing: easeInOutQuad; dir: alternate; loop: true;"
+            light="type:point; color: yellow; intensity: 1"></a-entity>
+        <a-entity geometry="primitive: sphere; radius: 1.5"
+            material="color: white; shader: flat; src: textures/marble.jpg" position="-15 10 -20"
+            animation="property: position; to: -15 2 -20; dur: 2000; easing: easeInOutQuad; dir: alternate; loop: true;"
+            light="type:point; color: green; intensity: 1"></a-entity>
+        <a-assets>
+            <img id="skyTexture" src="textures/sky.jpg">
+        </a-assets>
+        <a-sky src="#skyTexture" height="2048" radius="30" color="blue" theta-length="90" width="2048">
+        </a-sky>
+        <a-plane material=" color:#111;" rotation="-90 0 0" height="100" width="100" position="0 0 0">
+        </a-plane>
+        <a-camera>
+            <a-cursor fuse="true" fuse-timeout="1500"></a-cursor>
+        </a-camera>
+
+</body>
+
+</html>
